@@ -13,11 +13,11 @@ bool resetDriveSensors = false;
 bool isRunning = true;
 
 // ---- START TUNING VARIABLES ----
-double kP = 80;
+double kP = 100;
 double kD = 0;
 
-double turnkP = 0;
-double turnkD = 0;
+double turnkP = 0.13;
+double turnkD = 0.1;
 // ---- END TUNING VARIABLES ----
 
 int count = 0;
@@ -69,6 +69,8 @@ int drivePID() {
       // std::cout << "turnError: " << turnError << std::endl;
       // std::cout << "turnDerivative: " << turnDerivative << std::endl;
       // std::cout << "turnPower: " << turnMotorPower << std::endl;
+      // std::cout << "resetDriveSensors: " << resetDriveSensors << std::endl;
+      // std::cout << "isRunning: " << isRunning << std::endl;
       // std::cout << "////" << std::endl;
       ///////////////////////
       ///////////////////////

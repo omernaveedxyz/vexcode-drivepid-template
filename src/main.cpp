@@ -10,12 +10,12 @@ competition Competition;
 vex::controller master(vex::controllerType::primary);
 
 // vex::motor NAME(vex::PORT,vex::gearSetting::RATIO, REVERSED?)
-vex::motor rightDtFront(vex::PORT20, vex::gearSetting::ratio18_1, true);
+vex::motor rightDtFront(vex::PORT10, vex::gearSetting::ratio18_1, true);
 vex::motor rightDtBack(vex::PORT11, vex::gearSetting::ratio18_1, true);
-vex::motor leftDtFront(vex::PORT13, vex::gearSetting::ratio18_1, false);
-vex::motor leftDtBack(vex::PORT1, vex::gearSetting::ratio18_1, false);
+vex::motor leftDtFront(vex::PORT20, vex::gearSetting::ratio18_1, false);
+vex::motor leftDtBack(vex::PORT12, vex::gearSetting::ratio18_1, false);
 
-vex::inertial iSensor(vex::PORT3);
+vex::inertial iSensor(vex::PORT19);
 
 // motor_group NAME(MOTOR1, MOTOR2, MOTOR3, etc)
 motor_group rightDt(rightDtFront, rightDtBack);
@@ -37,10 +37,10 @@ task drivePIDTask;
 // ---- END TASKS ----
 
 int main() {
+  pre_auton();
+
   Competition.autonomous(auton);
   Competition.drivercontrol(driver);
-
-  pre_auton();
 
   while(true) {
     wait(10, msec);

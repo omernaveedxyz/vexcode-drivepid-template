@@ -6,7 +6,7 @@ double inToRev(double inches) {
   // Equation: distance / (pi * diameter of wheels)
   // or 
   // Equation: distance / (circumference of wheels)
-  return (inches / (M_PI * 4) );
+  return (inches / (M_PI * 4.1) );
 }
 
 /*----------------------------------------------------------------------------*/

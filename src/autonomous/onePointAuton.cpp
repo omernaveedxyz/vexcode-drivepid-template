@@ -21,18 +21,18 @@ void onePointAuton() {
   // runTask(20, 180, 12) -> Drive 10 inches forward while also rotating to 180 deg at maxSpeed of 12v
   // runTask always requires at least the distance, but the angle and maxSpeed are optional
 
-  runTask(20); // Move forward 20 inches
-  while(isRunning) {
-    wait(10, msec);
-  }
+  // runTask(24); // Move forward 20 inches
+  // while(isRunning) {
+  //   wait(10, msec);
+  // }
 
   runTask(0, 180); // This will change the angle the robot is facing
   while(isRunning) {
     wait(10, msec);
   }
 
-  runTask(10, 270); // You can even do both at the same time for cool arc turns
-  while(isRunning) {
-    wait(10, msec);
-  }
+  // runTask(10, 270); // You can even do both at the same time for cool arc turns
+  // while(isRunning) {
+  //   wait(10, msec);
+  // }
 }
